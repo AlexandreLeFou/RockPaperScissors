@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function examples</title>
+</head>
+<body>
+  
+  <script>
+  var max=1;
+  var min=3;
+  function computerPlay{
+    var choice=Math.floor(Math.random() *(max - min + 1) + min);
+    if choice ==1 
+    return ("Rock");
+    else if choice ==2
+    return ("Paper");
+    else if choice ==3
+    return ("Scissors");
+  }
+  function Round_play(playerSelection, computerSelection){
+    playerSelection=playerSelection.toUpperCase()
+    computerSelection=computerSelection.toUpperCase()
+    if (playerSelection=="PAPER" && computerSelection=="ROCK")
+    {return ("You Lose! Paper beats Rock");}
+    else if (playerSelection=="ROCK" && computerSelection=="SCISSORS")
+    {return ("You Lose! Rock beats Scissors");}
+    else if (playerSelection=="SCISSORS" && computerSelection=="PAPER")
+    {return ("You Lose! Scissors beats Paper");}
+    else if (playerSelection==computerSelection)
+    {return("We have a tie!")}
+    else
+    {return("WRONG INPUT!!!")}
+
+  }
+
+
+  </script>
+</body>
+</html>
