@@ -1,0 +1,82 @@
+html {
+  font-size: 10px;
+  background: url(https://thewallpaper.co/wp-content/uploads/2016/10/Grey-Texture-Wallpaper-Free-cool-images-download-free-tablet-background-wallpapers-smart-phones-mac-desktop-images-digital-photos-2560x1600-768x480.jpg) bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
+p{
+  font-size: 20px;
+  color: #A52A2A;
+}
+
+.info {
+    margin: auto;
+    width: 39%;
+    border: 2px solid grey;
+    padding: 19px;
+    box-shadow: 3px 6px;
+    color: #C0C0C0;
+
+    
+
+}
+
+.results{
+    padding-top:40px;
+    margin: auto;
+    width: 35%;
+    padding: 4px;
+    color: lime;
+   font-size: 25px;
+
+}
+
+#results_display{
+  padding-top:40px;
+  border-spacing: 44px;
+  border-radius:4px;
+
+}
+
+
+
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 121vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key1, .key2, .key3 {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 4rem;
+  font-size: 7.5rem;
+  padding: 1rem .5rem;
+  transition: all .06s ease;
+  width: 21rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  text-shadow: 0 0 .7rem black;
+  margin-bottom: 10px;
+}
+
+.letter_anim {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1.33rem;
+  color: #fce205;
+}
+
+
