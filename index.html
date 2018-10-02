@@ -14,14 +14,16 @@
 </div>
 
 <div >
-	<div id="results_display"align="center" class="results"> </div>
+	<div align="center" class="results"> 
+		<p id="results_display" ></p>
+	</div>
 </div>
 
 
   <div class="keys">
     <div style="cursor: pointer;" onclick='R_input()'  class="key1">
       <div>R</div>
-      <span class="letter_anim">(ROCK)</span>
+      <span class="letter_anim">ROCK</span>
     </div>
     <div style="cursor: pointer;" onclick='P_input()' class="key2">
       <div>P</div>
@@ -31,8 +33,11 @@
       <div>S</div>
       <span class="letter_anim">SCISSOR</span>
     </div>
+    </div>
 
-
+<div >
+	<div id="footer" class="results"> </div>
+</div>
 
 
   <script>
@@ -44,18 +49,22 @@ var counterPc=0;
 
 function R_input(){  
 	input = "ROCK"; 
+	document.getElementById('footer').innerHTML += "You:R |";
+
     playRound(input)
     game();
 }
 
 function P_input(){ 
-	input= "PAPER"; 
-	playRound(input)
+	input= "PAPER";
+	document.getElementById('footer').innerHTML += "You:P |";
+ 	playRound(input)
     game();
  }
 
 function S_input(){ 
 	input= "SCISSORS"; 
+	document.getElementById('footer').innerHTML += "You:S|";
 	playRound(input)
     game();
 }
@@ -64,13 +73,16 @@ function S_input(){
 
 function computerPlay(){
     var choice=Math.floor(Math.random() * 3) + 1   //values 1 to 3
-    if (choice ==1) 
-    computerSelection = "ROCK";
-    else if (choice ==2)
-    computerSelection = "PAPER";
-    else if (choice ==3)
-    computerSelection = "SCISSORS";
-	return computerSelection;
+    if (choice ==1){
+     document.getElementById('footer').innerHTML += " Computer:R,";
+     computerSelection = "ROCK";}
+    else if (choice ==2){
+     document.getElementById('footer').innerHTML += " Computer:P,";
+     computerSelection = "PAPER";}
+    else if (choice ==3){
+     document.getElementById('footer').innerHTML += " Computer:S,";
+     computerSelection = "SCISSORS";
+	return computerSelection;}
  }
 
 
@@ -103,6 +115,8 @@ function playRound(input){
    else if (playerSelection=="SCISSORS" && computerSelection=="ROCK")
     {//return ("You Lose Player! ROCK beats SCISSORS");
           counterPc=counterPc+1;}
+     document.getElementById('footer').innerHTML += "  (round: "+i+")"+"<br>";
+
  }
 
     //else if (playerSelection==computerSelection)
@@ -111,7 +125,6 @@ function playRound(input){
 function game(){
 	//console.log("The i is  "+i);
 	//console.log("The temp is  "+temp);
-	
 	if ((i%5)==0 && i<=500){
       if (counterPl>counterPc)
         document.getElementById('results_display').innerHTML += "<br>"+"Player wins "+counterPl+" to "+counterPc+" the PC!";
