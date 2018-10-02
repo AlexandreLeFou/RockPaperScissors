@@ -79,4 +79,14 @@ p{
   color: #fce205;
 }
 
-
+.footer
+{
+   display: flex;
+position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+}
