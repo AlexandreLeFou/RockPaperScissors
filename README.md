@@ -4,5 +4,8 @@ PROJECT: ROCK PAPER SCISSORS
 A simple console game for 5 iterations/user input using a basic HTML file and JavaScript
 
 
--RockPaperScissors_gui.html:
+-(index.html)-RockPaperScissors_gui-:
 Added 3 buttons/gui to the game and displayed the results to the user.
+
+You can check out my project here: https://alexandrelefou.github.io/RockPaperScissors/
+
